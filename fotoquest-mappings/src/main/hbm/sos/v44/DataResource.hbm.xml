@@ -10,8 +10,8 @@
         <property column="seriesid" name="seriesPkid" type="long" />
         <property formula="'F'" name="deleted"
             type="org.hibernate.type.TrueFalseType" />
-        <property column="phenomenontimestart" name="timestart" type="timestamp" />
-        <property column="phenomenontimeend" name="timeend" type="timestamp" />
+        <property column="resulttime" name="timestart" type="timestamp" />
+        <property column="resulttime" name="timeend" type="timestamp" update="false" insert="false"/>
 
         <map lazy="false" name="value" table="observation_set">
             <key column="observationid" />
