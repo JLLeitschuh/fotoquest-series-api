@@ -39,7 +39,7 @@ This project includes:
   Ehcache Core under The Apache Software License, Version 2.0
   EJML under The Apache Software License, Version 2.0
   EPSG Authority Service using HSQL database under GNU Lesser General Public License (LGPL) version 2.1
-  Fotoquest Series REST API - SPI Series Impl under GNU General Public License, Version 2.0
+  Fotoquest Series REST API under GNU General Public License, Version 2.0
   Hibernate Commons Annotations under GNU Lesser General Public License
   hibernate-spatial under GNU Lesser General Public License (LGPL) version 2.1
   Hibernate/Ehcache Integration under GNU Lesser General Public License
