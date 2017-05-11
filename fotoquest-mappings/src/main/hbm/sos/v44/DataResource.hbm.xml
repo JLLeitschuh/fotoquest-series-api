@@ -15,7 +15,7 @@
         <property formula="'F'" name="parent" type="org.hibernate.type.TrueFalseType" />
         <property formula="'F'" name="child" type="org.hibernate.type.TrueFalseType" />
         <property name="valueType" formula="'fotoquest'" type="string" />
-        
+
         <map lazy="false" name="value" table="observation_set">
             <key column="observationid" />
             <index column="direction" type="string" />

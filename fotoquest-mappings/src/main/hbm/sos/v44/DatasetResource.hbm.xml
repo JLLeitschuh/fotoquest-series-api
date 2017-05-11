@@ -28,9 +28,9 @@
             <index column="seriesid"/>
             <one-to-many class="RecordDataEntity"/>
         </list>
-        
+
     </subclass>
 
   </class>
-  
+
 </hibernate-mapping>
