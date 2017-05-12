@@ -7,7 +7,6 @@
             <generator class="assigned" />
         </id>
 
-        <discriminator formula="'fotoquest-media'" force="true" type="string"/>
         <property column="seriesid" name="seriesPkid" type="long" />
         <property formula="'F'" name="deleted" type="org.hibernate.type.TrueFalseType" />
         <property column="resulttime" name="timestart" type="timestamp" />

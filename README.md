@@ -18,6 +18,7 @@ the data. Besides pure data access, the data can be preprocessed with common IO 
   * overlaying of data from multiple series
   * conversion of raw data to other formats like pdf and png
 
+The following main frameworks are used to provide this API:
 - [Hibernate](https://hibernate.org/) 
 - [52°North DAO SPI Impl](https://github.com/52North/dao-series-api/)
 - [52°North Series API](https://github.com/52North/series-rest-api/) 
