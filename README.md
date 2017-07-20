@@ -23,8 +23,36 @@ The following main frameworks are used to provide this API:
 - [52°North DAO SPI Impl](https://github.com/52North/dao-series-api/)
 - [52°North Series API](https://github.com/52North/series-rest-api/) 
 
-## References
-tbd
+## Build/Install
+
+### Preparation
+1. Get Series REST API: `$ git clone https://github.com/52North/series-rest-api`
+1. Install [Git](https://git-scm.org) and [Maven](https://maven.apache.org)
+   and make it accessable from `$PATH`
+
+### Database
+1. If required, setup the Fotoquest Database (postgresql + postgis + fotoquest dump)
+1. Create views in the database by executing
+`fotoquest-mappings/src/extension/fotoquest/update_views.sh`
+(adjust user with sufficient rights beforehand)
+
+### Build Web Application
+1. `$ git clone https://github.com/52North/fotoquest-series-api`
+1. `$ cd fotoquest-rest-api`
+1. `$ cp fotoquest-webapp/src/main/resources/application.properties <custom_dir>/fotoquest.properties`
+1. `mvn clean install -Dlocal.configFile=file:/<custom_dir>/fotoquest.properties -Denv={dev,ci,prod}`
+(use either of these to set different log levels)
+1. Change database connection settings in `<custom_dir>/fotoquest.properties`
+1. Deploy `fotoquest-webapp/target/fotoquest-webapp.war` to
+`${CATALINA_HOME}/webapps/` folder
+1. Start Tomcat and access `http://<server>:<port>/fotoquest-webapp/api/v1/`
+
+
+### Further Lookups
+* https://github.com/52North/series-rest-api
+* https://github.com/52North/dao-series-api
+* https://52north.github.io/series-rest-api/
+
 
 ## License
 
@@ -45,26 +73,3 @@ most common workflows.
 
 ## Contact
 Henning Bredel (h.bredel@52north.org)
-
-## Quick Start
-### Webapp Installation
-- tbd: deployment configuration
-- tbd: build from source
-- tbd: externalize config before build
-
-### Configuration
-- general config options 
-  - Generalizer
-  - Prerendering
-  - Date formatting 
-  - Rendering Hints
-  - Status Intervals
-  - Metadata from a Database
-
-#### Logging
-Depending on which build environment you've chosen open one the `WEB-INF/classes/logback-{dev,ci,prod}.xml`. Here
-you can edit log levels and log outputs.
-
-### Client development
-Refer to the official [Series REST API documentation](http://52north.github.io/series-rest-api) to get a detailed 
-overview on how to access the data provided by the API. 
